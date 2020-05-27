@@ -1,4 +1,4 @@
-package com.spring.codeblog.service.serviceImpl;
+package com.spring.codeblog.serviceImpl;
 
 import java.util.List;
 
@@ -9,28 +9,25 @@ import com.spring.codeblog.model.Post;
 import com.spring.codeblog.repository.CodeblogRepository;
 import com.spring.codeblog.service.CodeblogService;
 
-// @Service mostra ao spring que isso é um Bean gerenciado por ele
-@Service  
+@Service  // mostra ao spring que esta classe é um Bean gerenciado por ele
 public class CodeblogServiceImpl implements CodeblogService {
 
 	@Autowired
-	CodeblogRepository codeBlogRepository;
+	CodeblogRepository codeblogRepository;
 	
 	@Override
 	public List<Post> findAll() {
-		// TODO Auto-generated method stub
-		return codeBlogRepository.findAll();
+		return codeblogRepository.findAll();
 	}
 
 	@Override
 	public Post findById(long id) {
-		return codeBlogRepository.findById(id).get();
+		return codeblogRepository.findById(id).get();
 	}
 
 	@Override
 	public Post save(Post post) {
-		return codeBlogRepository.save(post);
+		return codeblogRepository.save(post);
 	}
 
-	
 }

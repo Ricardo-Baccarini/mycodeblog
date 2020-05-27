@@ -5,6 +5,7 @@ import java.util.List;
 import com.spring.codeblog.model.Post;
 
 public interface CodeblogService {
+
 	
 	List<Post> findAll();
 	Post findById(long id);

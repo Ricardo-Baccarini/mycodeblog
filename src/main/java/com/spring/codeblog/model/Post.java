@@ -10,67 +10,65 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="TB_POST")
 public class Post {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
-	
-	@NotNull
-	private String titulo;
-	
-	@NotNull 
-	private String autor;
-	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-	private LocalDate data;
-	
-	@NotNull 
-	@Lob
-	private String texto;
-	
-	public long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    //@NotBlank
+    private String titulo;
 
-	public String getTitulo() {
-		return titulo;
-	}
+    //@NotBlank
+    private String autor;
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
+    private LocalDate data;
 
-	public String getAutor() {
-		return autor;
-	}
+    //@NotBlank
+    @Lob
+    private String texto;
 
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public LocalDate getData() {
-		return data;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setData(LocalDate data) {
-		this.data = data;
-	}
+    public String getTitulo() {
+        return titulo;
+    }
 
-	public String getTexto() {
-		return texto;
-	}
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
-	public void setTexto(String texto) {
-		this.texto = texto;
-	}
+    public String getAutor() {
+        return autor;
+    }
 
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
 }
