@@ -18,22 +18,22 @@ public class DummyData {
 	@Autowired //Renderiza
 	CodeblogRepository codeblogRepository;
 	
-	//@PostConstruct // Desabilitar para fazer teste 
+	//@PostConstruct // Habilitar para fazer teste 
 	public void savePosts() {
 		List<Post> postList = new ArrayList<>();
 		Post post1 = new Post();
 		post1.setAutor("Ricardo Baccarini");
-		post1.setTitulo("spring");
+		post1.setTitulo("spring pau na versao");
 		post1.setData(LocalDate.now());
-		post1.setTexto("hahahahahahaha blablabla");
+		post1.setTexto("Caraca tive que mexer no pom.xlm para acertar a versão do spring!!!!! Puta que merda!!!!! Mas vamos lá pra ver no que dá.");
 		
 		Post post2 = new Post();
-		post2.setAutor("Celina");
-		post2.setTitulo("java");
+		post2.setAutor("Isabella");
+		post2.setTitulo("Estudando em casa");
 		post2.setData(LocalDate.now());
-		post2.setTexto("terererererere terererere");
+		post2.setTexto("Tá um saco!!!!!");
 		
-		postList.add(post2);
+		postList.add(post1);
 		postList.add(post2);
 		
 		for(Post post: postList){
