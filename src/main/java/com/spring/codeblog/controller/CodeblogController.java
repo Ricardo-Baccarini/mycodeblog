@@ -31,11 +31,17 @@ public class CodeblogController {
 	
 	
 	@RequestMapping(value = "/posts/{id}", method = RequestMethod.GET)
-    public ModelAndView getPostDetais(@PathVariable("id") long id){
+    public ModelAndView getPostDetails(@PathVariable("id") long id){
         ModelAndView mv = new ModelAndView("postDetails");
         Post post = codeblogService.findById(id);
         mv.addObject("post", post);
         return mv;
     }
+	
+	
+	@RequestMapping(value = "/newpost", method = RequestMethod.GET)
+	public String getPostForm() {
+		return "postForm";
+	}
 	
 }
